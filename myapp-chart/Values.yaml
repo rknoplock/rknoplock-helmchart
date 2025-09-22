@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: rknoplock/simple-cicd     # substitua pelo nome da sua imagem no Docker Hub
+  tag: staging                         # ou a tag específica que você deseja
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort                       # ou ClusterIP / LoadBalancer
+  port: 80
+
+namespace: myapp
+
+ingress:
+  enabled: false                       # true se quiser criar ingress
+  host: myapp.local
