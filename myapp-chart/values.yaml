@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: alpine    # substitua pelo nome da sua imagem no Docker Hub
+  repository: postgres    # substitua pelo nome da sua imagem no Docker Hub
   tag: latest                         # ou a tag específica que você deseja
   pullPolicy: IfNotPresent
 
